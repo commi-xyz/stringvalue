@@ -1,3 +1,7 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
 
 local menu = Instance.new("ScreenGui")
 local UI = Instance.new("Frame")
@@ -33,8 +37,6 @@ local ExecuteUI = Instance.new("Frame")
 local UICorner_3 = Instance.new("UICorner")
 local UIGradient_2 = Instance.new("UIGradient")
 local TextBox = Instance.new("TextBox")
-local Execute = Instance.new("TextButton")
-local Inject = Instance.new("TextButton")
 local backgroundstar_2 = Instance.new("ImageLabel")
 local backgroundstar_3 = Instance.new("ImageLabel")
 local line_3 = Instance.new("Frame")
@@ -48,9 +50,9 @@ local infYield = Instance.new("TextButton")
 local scripthub = Instance.new("TextButton")
 local esp = Instance.new("TextButton")
 local commi_13 = Instance.new("Folder")
-local commi_14 = Instance.new("TextLabel")
-local commi_15 = Instance.new("TextLabel")
-local ScrollingFrame = Instance.new("ScrollingFrame")
+local commi1 = Instance.new("TextLabel")
+local commi2 = Instance.new("TextLabel")
+local scripthubframe = Instance.new("ScrollingFrame")
 local UICorner_6 = Instance.new("UICorner")
 local UIGradient_4 = Instance.new("UIGradient")
 local esp_2 = Instance.new("TextButton")
@@ -66,6 +68,8 @@ local line_5 = Instance.new("Frame")
 local line_6 = Instance.new("Frame")
 local UICorner_7 = Instance.new("UICorner")
 local bcgcommi_2 = Instance.new("Folder")
+local commi_14 = Instance.new("TextLabel")
+local commi_15 = Instance.new("TextLabel")
 local commi_16 = Instance.new("TextLabel")
 local commi_17 = Instance.new("TextLabel")
 local commi_18 = Instance.new("TextLabel")
@@ -78,15 +82,19 @@ local commi_24 = Instance.new("TextLabel")
 local commi_25 = Instance.new("TextLabel")
 local commi_26 = Instance.new("TextLabel")
 local commi_27 = Instance.new("TextLabel")
-local commi_28 = Instance.new("TextLabel")
-local commi_29 = Instance.new("TextLabel")
+local Clear = Instance.new("ImageButton")
+local UICorner_8 = Instance.new("UICorner")
+local Attach = Instance.new("ImageButton")
+local UICorner_9 = Instance.new("UICorner")
+local Execute = Instance.new("ImageButton")
+local UICorner_10 = Instance.new("UICorner")
 local OffexecutorUI = Instance.new("TextButton")
 local Frame = Instance.new("Frame")
-local UICorner_8 = Instance.new("UICorner")
+local UICorner_11 = Instance.new("UICorner")
 local star = Instance.new("ImageLabel")
 local UIGradient_5 = Instance.new("UIGradient")
 local OffUI = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
+local UICorner_12 = Instance.new("UICorner")
 
 --Properties:
 
@@ -395,8 +403,8 @@ ExecuteUI.Parent = menu
 ExecuteUI.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
 ExecuteUI.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ExecuteUI.BorderSizePixel = 0
-ExecuteUI.Position = UDim2.new(0.243000001, 0, 0.179000005, 0)
-ExecuteUI.Size = UDim2.new(0, 667, 0, 431)
+ExecuteUI.Position = UDim2.new(0.243000031, 0, 0.179000005, 0)
+ExecuteUI.Size = UDim2.new(0, 667, 0, 439)
 ExecuteUI.Visible = false
 ExecuteUI.ZIndex = 3
 
@@ -423,30 +431,6 @@ TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.TextSize = 20.000
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
 TextBox.TextYAlignment = Enum.TextYAlignment.Top
-
-Execute.Name = "Execute"
-Execute.Parent = ExecuteUI
-Execute.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Execute.BorderSizePixel = 0
-Execute.Position = UDim2.new(0.261158079, 0, 0.888888836, 0)
-Execute.Size = UDim2.new(0, 109, 0, 31)
-Execute.Font = Enum.Font.GothamBold
-Execute.Text = "Execute"
-Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
-Execute.TextSize = 22.000
-
-Inject.Name = "Inject"
-Inject.Parent = ExecuteUI
-Inject.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-Inject.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Inject.BorderSizePixel = 0
-Inject.Position = UDim2.new(0.659310162, 0, 0.888888836, 0)
-Inject.Size = UDim2.new(0, 109, 0, 31)
-Inject.Font = Enum.Font.GothamBold
-Inject.Text = "Attach"
-Inject.TextColor3 = Color3.fromRGB(255, 255, 255)
-Inject.TextSize = 22.000
 
 backgroundstar_2.Name = "background-star"
 backgroundstar_2.Parent = ExecuteUI
@@ -554,51 +538,52 @@ esp.TextSize = 24.000
 commi_13.Name = "commi"
 commi_13.Parent = ExecuteUI
 
-commi_14.Name = "commi"
-commi_14.Parent = commi_13
-commi_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-commi_14.BackgroundTransparency = 1.000
-commi_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
-commi_14.BorderSizePixel = 0
-commi_14.Position = UDim2.new(0.365040749, 0, -0.0277125817, 0)
-commi_14.Size = UDim2.new(0, 178, 0, 70)
-commi_14.ZIndex = 3
-commi_14.Font = Enum.Font.GothamBold
-commi_14.Text = "commi.xyz"
-commi_14.TextColor3 = Color3.fromRGB(255, 255, 255)
-commi_14.TextSize = 29.000
-commi_14.TextStrokeColor3 = Color3.fromRGB(14, 48, 0)
+commi1.Name = "commi1"
+commi1.Parent = commi_13
+commi1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+commi1.BackgroundTransparency = 1.000
+commi1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+commi1.BorderSizePixel = 0
+commi1.Position = UDim2.new(0.365040749, 0, -0.0277125817, 0)
+commi1.Size = UDim2.new(0, 178, 0, 70)
+commi1.ZIndex = 3
+commi1.Font = Enum.Font.GothamBold
+commi1.Text = "commi.xyz"
+commi1.TextColor3 = Color3.fromRGB(255, 255, 255)
+commi1.TextSize = 29.000
+commi1.TextStrokeColor3 = Color3.fromRGB(14, 48, 0)
 
-commi_15.Name = "commi"
-commi_15.Parent = commi_13
-commi_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-commi_15.BackgroundTransparency = 1.000
-commi_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
-commi_15.BorderSizePixel = 0
-commi_15.Position = UDim2.new(0.365040749, 0, -0.0137914671, 0)
-commi_15.Size = UDim2.new(0, 178, 0, 64)
-commi_15.Font = Enum.Font.GothamBold
-commi_15.Text = "commi.xyz"
-commi_15.TextColor3 = Color3.fromRGB(0, 0, 0)
-commi_15.TextSize = 29.000
-commi_15.TextStrokeColor3 = Color3.fromRGB(14, 48, 0)
+commi2.Name = "commi2"
+commi2.Parent = commi_13
+commi2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+commi2.BackgroundTransparency = 1.000
+commi2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+commi2.BorderSizePixel = 0
+commi2.Position = UDim2.new(0.365040749, 0, -0.0137914671, 0)
+commi2.Size = UDim2.new(0, 178, 0, 64)
+commi2.Font = Enum.Font.GothamBold
+commi2.Text = "commi.xyz"
+commi2.TextColor3 = Color3.fromRGB(0, 0, 0)
+commi2.TextSize = 29.000
+commi2.TextStrokeColor3 = Color3.fromRGB(14, 48, 0)
 
-ScrollingFrame.Parent = ExecuteUI
-ScrollingFrame.Active = true
-ScrollingFrame.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.Position = UDim2.new(1, 0, 0, 0)
-ScrollingFrame.Size = UDim2.new(0, 217, 0, 431)
-ScrollingFrame.ScrollBarThickness = 9
+scripthubframe.Name = "scripthubframe"
+scripthubframe.Parent = ExecuteUI
+scripthubframe.Active = true
+scripthubframe.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+scripthubframe.BorderColor3 = Color3.fromRGB(0, 0, 0)
+scripthubframe.BorderSizePixel = 0
+scripthubframe.Position = UDim2.new(1, 0, 0, 0)
+scripthubframe.Size = UDim2.new(0, 217, 0, 439)
+scripthubframe.ScrollBarThickness = 9
 
-UICorner_6.Parent = ScrollingFrame
+UICorner_6.Parent = scripthubframe
 
 UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.88, Color3.fromRGB(30, 30, 30)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
-UIGradient_4.Parent = ScrollingFrame
+UIGradient_4.Parent = scripthubframe
 
 esp_2.Name = "esp"
-esp_2.Parent = ScrollingFrame
+esp_2.Parent = scripthubframe
 esp_2.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
 esp_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 esp_2.BorderSizePixel = 0
@@ -610,7 +595,7 @@ esp_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 esp_2.TextSize = 24.000
 
 infYield_2.Name = "inf-Yield"
-infYield_2.Parent = ScrollingFrame
+infYield_2.Parent = scripthubframe
 infYield_2.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
 infYield_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 infYield_2.BorderSizePixel = 0
@@ -622,7 +607,7 @@ infYield_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 infYield_2.TextSize = 24.000
 
 scripthub_2.Name = "script-hub"
-scripthub_2.Parent = ScrollingFrame
+scripthub_2.Parent = scripthubframe
 scripthub_2.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
 scripthub_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 scripthub_2.BorderSizePixel = 0
@@ -634,7 +619,7 @@ scripthub_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 scripthub_2.TextSize = 24.000
 
 bypasswords.Name = "bypass-words"
-bypasswords.Parent = ScrollingFrame
+bypasswords.Parent = scripthubframe
 bypasswords.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
 bypasswords.BorderColor3 = Color3.fromRGB(0, 0, 0)
 bypasswords.BorderSizePixel = 0
@@ -646,7 +631,7 @@ bypasswords.TextColor3 = Color3.fromRGB(255, 255, 255)
 bypasswords.TextSize = 24.000
 
 chatspy.Name = "chatspy"
-chatspy.Parent = ScrollingFrame
+chatspy.Parent = scripthubframe
 chatspy.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
 chatspy.BorderColor3 = Color3.fromRGB(0, 0, 0)
 chatspy.BorderSizePixel = 0
@@ -658,7 +643,7 @@ chatspy.TextColor3 = Color3.fromRGB(255, 255, 255)
 chatspy.TextSize = 24.000
 
 codebooths.Name = "codebooths"
-codebooths.Parent = ScrollingFrame
+codebooths.Parent = scripthubframe
 codebooths.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 codebooths.BackgroundTransparency = 1.000
 codebooths.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -724,13 +709,41 @@ UICorner_7.Parent = line_6
 bcgcommi_2.Name = "bcgcommi"
 bcgcommi_2.Parent = ExecuteUI
 
+commi_14.Name = "commi"
+commi_14.Parent = bcgcommi_2
+commi_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+commi_14.BackgroundTransparency = 1.000
+commi_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+commi_14.BorderSizePixel = 0
+commi_14.Position = UDim2.new(0.272045016, 0, 0.0374331549, 0)
+commi_14.Size = UDim2.new(0, 200, 0, 50)
+commi_14.Font = Enum.Font.GothamBold
+commi_14.Text = "commi"
+commi_14.TextColor3 = Color3.fromRGB(0, 24, 59)
+commi_14.TextSize = 24.000
+commi_14.TextTransparency = 0.810
+
+commi_15.Name = "commi"
+commi_15.Parent = bcgcommi_2
+commi_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+commi_15.BackgroundTransparency = 1.000
+commi_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+commi_15.BorderSizePixel = 0
+commi_15.Position = UDim2.new(0.413126469, 0, -0.0308696274, 0)
+commi_15.Size = UDim2.new(0, 200, 0, 50)
+commi_15.Font = Enum.Font.GothamBold
+commi_15.Text = "commi"
+commi_15.TextColor3 = Color3.fromRGB(0, 24, 59)
+commi_15.TextSize = 24.000
+commi_15.TextTransparency = 0.810
+
 commi_16.Name = "commi"
 commi_16.Parent = bcgcommi_2
 commi_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commi_16.BackgroundTransparency = 1.000
 commi_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commi_16.BorderSizePixel = 0
-commi_16.Position = UDim2.new(0.272045016, 0, 0.0374331549, 0)
+commi_16.Position = UDim2.new(0.0506566614, 0, -0.0294117648, 0)
 commi_16.Size = UDim2.new(0, 200, 0, 50)
 commi_16.Font = Enum.Font.GothamBold
 commi_16.Text = "commi"
@@ -744,7 +757,7 @@ commi_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commi_17.BackgroundTransparency = 1.000
 commi_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commi_17.BorderSizePixel = 0
-commi_17.Position = UDim2.new(0.413126469, 0, -0.0308696274, 0)
+commi_17.Position = UDim2.new(0.571813583, 0, 0.0363288745, 0)
 commi_17.Size = UDim2.new(0, 200, 0, 50)
 commi_17.Font = Enum.Font.GothamBold
 commi_17.Text = "commi"
@@ -758,7 +771,7 @@ commi_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commi_18.BackgroundTransparency = 1.000
 commi_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commi_18.BorderSizePixel = 0
-commi_18.Position = UDim2.new(0.0506566614, 0, -0.0294117648, 0)
+commi_18.Position = UDim2.new(0.686679184, 0, -0.0294117648, 0)
 commi_18.Size = UDim2.new(0, 200, 0, 50)
 commi_18.Font = Enum.Font.GothamBold
 commi_18.Text = "commi"
@@ -772,7 +785,7 @@ commi_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commi_19.BackgroundTransparency = 1.000
 commi_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commi_19.BorderSizePixel = 0
-commi_19.Position = UDim2.new(0.571813583, 0, 0.0363288745, 0)
+commi_19.Position = UDim2.new(-0.0911954939, 0, 0.0502499901, 0)
 commi_19.Size = UDim2.new(0, 200, 0, 50)
 commi_19.Font = Enum.Font.GothamBold
 commi_19.Text = "commi"
@@ -786,7 +799,7 @@ commi_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commi_20.BackgroundTransparency = 1.000
 commi_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commi_20.BorderSizePixel = 0
-commi_20.Position = UDim2.new(0.686679184, 0, -0.0294117648, 0)
+commi_20.Position = UDim2.new(0.111841843, 0, 0.0363288745, 0)
 commi_20.Size = UDim2.new(0, 200, 0, 50)
 commi_20.Font = Enum.Font.GothamBold
 commi_20.Text = "commi"
@@ -800,7 +813,7 @@ commi_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commi_21.BackgroundTransparency = 1.000
 commi_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commi_21.BorderSizePixel = 0
-commi_21.Position = UDim2.new(-0.0911954939, 0, 0.0502499901, 0)
+commi_21.Position = UDim2.new(0.766716123, 0, 0.0363288745, 0)
 commi_21.Size = UDim2.new(0, 200, 0, 50)
 commi_21.Font = Enum.Font.GothamBold
 commi_21.Text = "commi"
@@ -814,7 +827,7 @@ commi_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commi_22.BackgroundTransparency = 1.000
 commi_22.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commi_22.BorderSizePixel = 0
-commi_22.Position = UDim2.new(0.111841843, 0, 0.0363288745, 0)
+commi_22.Position = UDim2.new(0.532833099, 0, -0.00311427983, 0)
 commi_22.Size = UDim2.new(0, 200, 0, 50)
 commi_22.Font = Enum.Font.GothamBold
 commi_22.Text = "commi"
@@ -828,7 +841,7 @@ commi_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commi_23.BackgroundTransparency = 1.000
 commi_23.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commi_23.BorderSizePixel = 0
-commi_23.Position = UDim2.new(0.766716123, 0, 0.0363288745, 0)
+commi_23.Position = UDim2.new(0.939129949, 0, -0.0309565067, 0)
 commi_23.Size = UDim2.new(0, 200, 0, 50)
 commi_23.Font = Enum.Font.GothamBold
 commi_23.Text = "commi"
@@ -842,8 +855,8 @@ commi_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commi_24.BackgroundTransparency = 1.000
 commi_24.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commi_24.BorderSizePixel = 0
-commi_24.Position = UDim2.new(0.532833099, 0, -0.00311427983, 0)
-commi_24.Size = UDim2.new(0, 200, 0, 50)
+commi_24.Position = UDim2.new(1.13553166, 0, 0.0363288745, 0)
+commi_24.Size = UDim2.new(0, 126, 0, 56)
 commi_24.Font = Enum.Font.GothamBold
 commi_24.Text = "commi"
 commi_24.TextColor3 = Color3.fromRGB(0, 24, 59)
@@ -856,8 +869,8 @@ commi_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commi_25.BackgroundTransparency = 1.000
 commi_25.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commi_25.BorderSizePixel = 0
-commi_25.Position = UDim2.new(0.939129949, 0, -0.0309565067, 0)
-commi_25.Size = UDim2.new(0, 200, 0, 50)
+commi_25.Position = UDim2.new(1.19850028, 0, -0.133044675, 0)
+commi_25.Size = UDim2.new(0, 84, 0, 129)
 commi_25.Font = Enum.Font.GothamBold
 commi_25.Text = "commi"
 commi_25.TextColor3 = Color3.fromRGB(0, 24, 59)
@@ -870,8 +883,8 @@ commi_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commi_26.BackgroundTransparency = 1.000
 commi_26.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commi_26.BorderSizePixel = 0
-commi_26.Position = UDim2.new(1.13553166, 0, 0.0363288745, 0)
-commi_26.Size = UDim2.new(0, 126, 0, 56)
+commi_26.Position = UDim2.new(0.753456414, 0, -0.133044675, 0)
+commi_26.Size = UDim2.new(0, 380, 0, 202)
 commi_26.Font = Enum.Font.GothamBold
 commi_26.Text = "commi"
 commi_26.TextColor3 = Color3.fromRGB(0, 24, 59)
@@ -884,41 +897,46 @@ commi_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commi_27.BackgroundTransparency = 1.000
 commi_27.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commi_27.BorderSizePixel = 0
-commi_27.Position = UDim2.new(1.19850028, 0, -0.133044675, 0)
-commi_27.Size = UDim2.new(0, 84, 0, 129)
+commi_27.Position = UDim2.new(0.753456414, 0, -0.133044675, 0)
+commi_27.Size = UDim2.new(0, 281, 0, 154)
 commi_27.Font = Enum.Font.GothamBold
 commi_27.Text = "commi"
 commi_27.TextColor3 = Color3.fromRGB(0, 24, 59)
 commi_27.TextSize = 24.000
 commi_27.TextTransparency = 0.810
 
-commi_28.Name = "commi"
-commi_28.Parent = bcgcommi_2
-commi_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-commi_28.BackgroundTransparency = 1.000
-commi_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
-commi_28.BorderSizePixel = 0
-commi_28.Position = UDim2.new(0.753456414, 0, -0.133044675, 0)
-commi_28.Size = UDim2.new(0, 380, 0, 202)
-commi_28.Font = Enum.Font.GothamBold
-commi_28.Text = "commi"
-commi_28.TextColor3 = Color3.fromRGB(0, 24, 59)
-commi_28.TextSize = 24.000
-commi_28.TextTransparency = 0.810
+Clear.Name = "Clear"
+Clear.Parent = ExecuteUI
+Clear.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Clear.BorderSizePixel = 0
+Clear.Position = UDim2.new(0.509745121, 0, 0.872647405, 0)
+Clear.Size = UDim2.new(0, 51, 0, 45)
+Clear.Image = "http://www.roblox.com/asset/?id=9348208337"
 
-commi_29.Name = "commi"
-commi_29.Parent = bcgcommi_2
-commi_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-commi_29.BackgroundTransparency = 1.000
-commi_29.BorderColor3 = Color3.fromRGB(0, 0, 0)
-commi_29.BorderSizePixel = 0
-commi_29.Position = UDim2.new(0.753456414, 0, -0.133044675, 0)
-commi_29.Size = UDim2.new(0, 281, 0, 154)
-commi_29.Font = Enum.Font.GothamBold
-commi_29.Text = "commi"
-commi_29.TextColor3 = Color3.fromRGB(0, 24, 59)
-commi_29.TextSize = 24.000
-commi_29.TextTransparency = 0.810
+UICorner_8.Parent = Clear
+
+Attach.Name = "Attach"
+Attach.Parent = ExecuteUI
+Attach.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+Attach.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Attach.BorderSizePixel = 0
+Attach.Position = UDim2.new(0.722638667, 0, 0.872647405, 0)
+Attach.Size = UDim2.new(0, 51, 0, 45)
+Attach.Image = "rbxassetid://6187009322"
+
+UICorner_9.Parent = Attach
+
+Execute.Name = "Execute"
+Execute.Parent = ExecuteUI
+Execute.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute.BorderSizePixel = 0
+Execute.Position = UDim2.new(0.28185907, 0, 0.870496333, 0)
+Execute.Size = UDim2.new(0, 55, 0, 48)
+Execute.Image = "rbxassetid://5173558738"
+
+UICorner_10.Parent = Execute
 
 OffexecutorUI.Name = "OffexecutorUI"
 OffexecutorUI.Parent = menu
@@ -941,7 +959,7 @@ Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0, 0, -3.05175774e-07, 0)
 Frame.Size = UDim2.new(0, 49, 0, 46)
 
-UICorner_8.Parent = Frame
+UICorner_11.Parent = Frame
 
 star.Name = "star"
 star.Parent = OffexecutorUI
@@ -969,12 +987,12 @@ OffUI.Text = ""
 OffUI.TextColor3 = Color3.fromRGB(0, 0, 0)
 OffUI.TextSize = 14.000
 
-UICorner_9.CornerRadius = UDim.new(5, 0)
-UICorner_9.Parent = OffUI
+UICorner_12.CornerRadius = UDim.new(5, 0)
+UICorner_12.Parent = OffUI
 
 -- Scripts:
 
-local function MUVH_fake_script() -- ImageLabel.PlrIcon 
+local function OZFAC_fake_script() -- ImageLabel.PlrIcon 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local frame = script.Parent.Parent
@@ -989,8 +1007,8 @@ local function MUVH_fake_script() -- ImageLabel.PlrIcon
 	
 	frame.ImageLabel.Image = content
 end
-coroutine.wrap(MUVH_fake_script)()
-local function JSDC_fake_script() -- menu.menumove 
+coroutine.wrap(OZFAC_fake_script)()
+local function YTKCAD_fake_script() -- menu.menumove 
 	local script = Instance.new('LocalScript', menu)
 
 	local player = game.Players.LocalPlayer
@@ -1000,42 +1018,8 @@ local function JSDC_fake_script() -- menu.menumove
 	frame.Selectable = true
 	frame.Active = true
 end
-coroutine.wrap(JSDC_fake_script)()
-local function WVRJYM_fake_script() -- Execute.LocalScript 
-	local script = Instance.new('LocalScript', Execute)
-
-	local button = script.Parent
-	local textbox = script.Parent.Parent.TextBox
-	button.MouseButton1Click:Connect(function()
-		loadstring(textbox.Text)()
-	end)
-end
-coroutine.wrap(WVRJYM_fake_script)()
-local function MDCNTXE_fake_script() -- Inject.Changename 
-	local script = Instance.new('LocalScript', Inject)
-
-	local text = script.Parent.Parent.commi
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		text.Text = "commi.xyz [In progress.]"
-		wait(0.5)
-		text.Text = "commi.xyz [Attach.]"
-		wait(0.5)
-		text.Text = "commi.xyz [Attach..]"
-		wait(0.5)
-		text.Text = "commi.xyz [Attach...]"
-		wait(0.5)
-		text.Text = "commi.xyz [Attach.]"
-		wait(0.5)
-		text.Text = "commi.xyz [Attach..]"
-	    wait(0.5)
-		text.Text = "commi.xyz [Attached!]"
-		wait(2)
-		text.Text = "commi.xyz"
-	end)
-end
-coroutine.wrap(MDCNTXE_fake_script)()
-local function NDZPCTK_fake_script() -- ExecuteUI.Move 
+coroutine.wrap(YTKCAD_fake_script)()
+local function DVPO_fake_script() -- ExecuteUI.Move 
 	local script = Instance.new('LocalScript', ExecuteUI)
 
 	local player = game.Players.LocalPlayer
@@ -1045,8 +1029,8 @@ local function NDZPCTK_fake_script() -- ExecuteUI.Move
 	frame.Selectable = true
 	frame.Active = true
 end
-coroutine.wrap(NDZPCTK_fake_script)()
-local function JLGT_fake_script() -- infYield.Enable 
+coroutine.wrap(DVPO_fake_script)()
+local function FHOLHJH_fake_script() -- infYield.Enable 
 	local script = Instance.new('LocalScript', infYield)
 
 	local userInputService = game:GetService("UserInputService")
@@ -1067,8 +1051,8 @@ local function JLGT_fake_script() -- infYield.Enable
 	-- Подключаем функцию onClick к кнопке
 	button.Activated:Connect(onClick)
 end
-coroutine.wrap(JLGT_fake_script)()
-local function JVBHMF_fake_script() -- scripthub.Enable 
+coroutine.wrap(FHOLHJH_fake_script)()
+local function PKCIY_fake_script() -- scripthub.Enable 
 	local script = Instance.new('LocalScript', scripthub)
 
 	local userInputService = game:GetService("UserInputService")
@@ -1088,8 +1072,8 @@ local function JVBHMF_fake_script() -- scripthub.Enable
 	-- Подключаем функцию onClick к кнопке
 	button.Activated:Connect(onClick)
 end
-coroutine.wrap(JVBHMF_fake_script)()
-local function KEXR_fake_script() -- infYield_2.Enable 
+coroutine.wrap(PKCIY_fake_script)()
+local function ZFMUJ_fake_script() -- infYield_2.Enable 
 	local script = Instance.new('LocalScript', infYield_2)
 
 	local userInputService = game:GetService("UserInputService")
@@ -1110,8 +1094,8 @@ local function KEXR_fake_script() -- infYield_2.Enable
 	-- Подключаем функцию onClick к кнопке
 	button.Activated:Connect(onClick)
 end
-coroutine.wrap(KEXR_fake_script)()
-local function FXWDFJ_fake_script() -- scripthub_2.Enable 
+coroutine.wrap(ZFMUJ_fake_script)()
+local function CIBVEI_fake_script() -- scripthub_2.Enable 
 	local script = Instance.new('LocalScript', scripthub_2)
 
 	local userInputService = game:GetService("UserInputService")
@@ -1131,8 +1115,8 @@ local function FXWDFJ_fake_script() -- scripthub_2.Enable
 	-- Подключаем функцию onClick к кнопке
 	button.Activated:Connect(onClick)
 end
-coroutine.wrap(FXWDFJ_fake_script)()
-local function TJCD_fake_script() -- bypasswords.Enable 
+coroutine.wrap(CIBVEI_fake_script)()
+local function ADMXFE_fake_script() -- bypasswords.Enable 
 	local script = Instance.new('LocalScript', bypasswords)
 
 	local userInputService = game:GetService("UserInputService")
@@ -1152,8 +1136,8 @@ local function TJCD_fake_script() -- bypasswords.Enable
 	-- Подключаем функцию onClick к кнопке
 	button.Activated:Connect(onClick)
 end
-coroutine.wrap(TJCD_fake_script)()
-local function IJLC_fake_script() -- chatspy.Enable 
+coroutine.wrap(ADMXFE_fake_script)()
+local function TLNNXPE_fake_script() -- chatspy.Enable 
 	local script = Instance.new('LocalScript', chatspy)
 
 	local userInputService = game:GetService("UserInputService")
@@ -1173,8 +1157,61 @@ local function IJLC_fake_script() -- chatspy.Enable
 	-- Подключаем функцию onClick к кнопке
 	button.Activated:Connect(onClick)
 end
-coroutine.wrap(IJLC_fake_script)()
-local function CNVR_fake_script() -- OffexecutorUI.LocalScript 
+coroutine.wrap(TLNNXPE_fake_script)()
+local function MXIC_fake_script() -- Clear.Clear 
+	local script = Instance.new('LocalScript', Clear)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	button.MouseButton1Click:Connect(function()
+		textbox.Text = ""
+	end)
+end
+coroutine.wrap(MXIC_fake_script)()
+local function GSOP_fake_script() -- Attach.Changename 
+	local script = Instance.new('LocalScript', Attach)
+
+	local text = script.Parent.Parent.commi.commi1
+	local text1 = script.Parent.Parent.commi.commi2
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		text.Text = "commi.xyz [In process.]"
+		text1.Text = "commi.xyz [In process.]"
+		wait(0.5)
+		text.Text = "commi.xyz [Attach.]"
+		text1.Text = "commi.xyz [Attach.]"
+		wait(0.5)
+		text.Text = "commi.xyz [Attach..]"
+		text1.Text = "commi.xyz [Attach..]"
+		wait(0.5)
+		text.Text = "commi.xyz [Attach...]"
+		text1.Text = "commi.xyz [Attach...]"
+		wait(0.5)
+		text.Text = "commi.xyz [Attach.]"
+		text1.Text = "commi.xyz [Attach.]"
+		wait(0.5)
+		text.Text = "commi.xyz [Attach..]"
+		text1.Text = "commi.xyz [Attach..]"
+	    wait(0.5)
+		text.Text = "commi.xyz [Attached!]"
+		text1.Text = "commi.xyz [Attached!]"
+		wait(2)
+		text.Text = "commi.xyz"
+		text1.Text = "commi.xyz"
+	end)
+end
+coroutine.wrap(GSOP_fake_script)()
+local function IIZUKAB_fake_script() -- Execute.LocalScript 
+	local script = Instance.new('LocalScript', Execute)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	button.MouseButton1Click:Connect(function()
+		loadstring(textbox.Text)()
+	end)
+end
+coroutine.wrap(IIZUKAB_fake_script)()
+local function BCZQKMY_fake_script() -- OffexecutorUI.LocalScript 
 	local script = Instance.new('LocalScript', OffexecutorUI)
 
 	local frame = script.Parent.Parent.ExecuteUI
@@ -1193,8 +1230,8 @@ local function CNVR_fake_script() -- OffexecutorUI.LocalScript
 		error("Script parent object is not a UI object!")
 	end
 end
-coroutine.wrap(CNVR_fake_script)()
-local function JUNVNR_fake_script() -- OffexecutorUI.offexecui 
+coroutine.wrap(BCZQKMY_fake_script)()
+local function MNTG_fake_script() -- OffexecutorUI.offexecui 
 	local script = Instance.new('LocalScript', OffexecutorUI)
 
 	local player = game.Players.LocalPlayer
@@ -1204,8 +1241,8 @@ local function JUNVNR_fake_script() -- OffexecutorUI.offexecui
 	frame.Selectable = true
 	frame.Active = true
 end
-coroutine.wrap(JUNVNR_fake_script)()
-local function CUDZN_fake_script() -- star.LocalScript 
+coroutine.wrap(MNTG_fake_script)()
+local function NVFVM_fake_script() -- star.LocalScript 
 	local script = Instance.new('LocalScript', star)
 
 	local image = script.Parent
@@ -1233,8 +1270,8 @@ local function CUDZN_fake_script() -- star.LocalScript
 	
 	animate()
 end
-coroutine.wrap(CUDZN_fake_script)()
-local function NXORJDO_fake_script() -- OffUI.LocalScript 
+coroutine.wrap(NVFVM_fake_script)()
+local function NUACDLI_fake_script() -- OffUI.LocalScript 
 	local script = Instance.new('LocalScript', OffUI)
 
 	local frame = script.Parent.Parent.UI
@@ -1253,15 +1290,12 @@ local function NXORJDO_fake_script() -- OffUI.LocalScript
 		error("Script parent object is not a UI object!")
 	end
 end
-coroutine.wrap(NXORJDO_fake_script)()
+coroutine.wrap(NUACDLI_fake_script)()
 
+-- Gui to Lua
+-- Version: 3.2
 
--- @start: filtering-enabled = true
---         print("FUCKED!")
---         local sexrape = game:GetService("Players")
---         @print(sexrape)
-
-
+-- Instances:
 
 local tabmenu = Instance.new("ScreenGui")
 local over = Instance.new("Frame")
